@@ -1,0 +1,105 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPVqjZRad+aCzSPt4JOs8yj",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/yaweee/about-us-/blob/main/OOP\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Animal:\n",
+        "    def __init__(self, species, name, age, weight):\n",
+        "        self._species = species\n",
+        "        self._name = name\n",
+        "        self._age = age\n",
+        "        self._weight = weight\n",
+        "\n",
+        "    # Getter methods\n",
+        "    def getSpecies(self):\n",
+        "        return self._species\n",
+        "\n",
+        "    def getName(self):\n",
+        "        return self._name\n",
+        "\n",
+        "    def getAge(self):\n",
+        "        return self._age\n",
+        "\n",
+        "    def getWeight(self):\n",
+        "        return self._weight\n",
+        "\n",
+        "    # Setter methods\n",
+        "    def setSpecies(self, species):\n",
+        "        self._species = species\n",
+        "\n",
+        "    def setName(self, name):\n",
+        "        self._name = name\n",
+        "\n",
+        "    def setAge(self, age):\n",
+        "        self._age = age\n",
+        "\n",
+        "    def setWeight(self, weight):\n",
+        "        self._weight = weight\n",
+        "\n",
+        "    def __str__(self):\n",
+        "        return f\"Animal(Species='{self._species}', Name='{self._name}', Age='{self._age}', Weight='{self._weight}')\"\n",
+        "\n",
+        "def main():\n",
+        "    species = input(\"Enter Animal Species: \")\n",
+        "    name = input(\"Enter Animal Name: \")\n",
+        "    age = input(\"Enter Animal Age: \")\n",
+        "    weight = input(\"Enter Animal Weight: \")\n",
+        "\n",
+        "    # Create instance of Animal class\n",
+        "    animal = Animal(species, name, age, weight)\n",
+        "    print(\"Animal created: \", animal)\n",
+        "\n",
+        "if __name__ == \"__main__\":\n",
+        "    main()"
+      ],
+      "metadata": {
+        "id": "uFjQLzUJnLYX",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "collapsed": true,
+        "outputId": "3fdaf45b-4944-42aa-87da-366c3ab94d58"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter Animal Species: Bading\n",
+            "Enter Animal Name: Godwin\n",
+            "Enter Animal Age: 28\n",
+            "Enter Animal Weight: 20000\n",
+            "Animal created:  Animal(Species='Bading', Name='Godwin', Age='28', Weight='20000')\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
